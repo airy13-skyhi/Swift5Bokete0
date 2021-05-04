@@ -48,6 +48,7 @@ class ViewController: UIViewController {
             }
             
         }
+        getImages(keyword: "funny")
         
     }
     
@@ -66,7 +67,7 @@ class ViewController: UIViewController {
             case .success:
                 let json:JSON = JSON(response.data as Any)
                 let iamgeString = json["hits"][self.count]["webformatURL"].string
-                
+                self.odaiImageView.sd_setImage(with: URL(string: iamgeString!), completed: nil)
                 
             case .failure(let error):
                 print(error)
@@ -79,6 +80,46 @@ class ViewController: UIViewController {
         
     }
     
+    
+    @IBAction func nextOdai(_ sender: Any) {
+        
+        count += 1
+        
+        if searchTextField.text == "" {
+            
+            getImages(keyword: "funny")
+            
+        }else {
+            
+            getImages(keyword: searchTextField.text!)
+        }
+        
+    }
+    
+    
+    
+    @IBAction func searchAction(_ sender: Any) {
+        
+        self.count = 0
+        
+        if searchTextField.text == "" {
+            
+            getImages(keyword: "funny")
+            
+        }else {
+            
+            getImages(keyword: searchTextField.text!)
+        }
+        
+        
+    }
+    
+    
+    @IBAction func done(_ sender: Any) {
+        
+        
+        performSegue(withIdentifier: "done", sender: nil)
+    }
     
     
 }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		05FE854A2640D69700339FF9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FE85482640D69700339FF9 /* Main.storyboard */; };
 		05FE854C2640D69800339FF9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05FE854B2640D69800339FF9 /* Assets.xcassets */; };
 		05FE854F2640D69800339FF9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 05FE854D2640D69800339FF9 /* LaunchScreen.storyboard */; };
+		05FE85572641021E00339FF9 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FE85562641021E00339FF9 /* ShareViewController.swift */; };
 		5FE2F258906BAB5CC7F380C9 /* Pods_Swift5Bokete0.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49B94BD445782958C8684C3C /* Pods_Swift5Bokete0.framework */; };
 /* End PBXBuildFile section */
 
@@ -25,6 +26,7 @@
 		05FE854B2640D69800339FF9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		05FE854E2640D69800339FF9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		05FE85502640D69800339FF9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		05FE85562641021E00339FF9 /* ShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		2B468B4CC6570BE85C25834F /* Pods-Swift5Bokete0.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Bokete0.release.xcconfig"; path = "Target Support Files/Pods-Swift5Bokete0/Pods-Swift5Bokete0.release.xcconfig"; sourceTree = "<group>"; };
 		49B94BD445782958C8684C3C /* Pods_Swift5Bokete0.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift5Bokete0.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F4CB53AC2C8C093E3B9C5A /* Pods-Swift5Bokete0.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift5Bokete0.debug.xcconfig"; path = "Target Support Files/Pods-Swift5Bokete0/Pods-Swift5Bokete0.debug.xcconfig"; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				05FE85422640D69700339FF9 /* AppDelegate.swift */,
 				05FE85442640D69700339FF9 /* SceneDelegate.swift */,
 				05FE85462640D69700339FF9 /* ViewController.swift */,
+				05FE85562641021E00339FF9 /* ShareViewController.swift */,
 				05FE85482640D69700339FF9 /* Main.storyboard */,
 				05FE854B2640D69800339FF9 /* Assets.xcassets */,
 				05FE854D2640D69800339FF9 /* LaunchScreen.storyboard */,
@@ -88,7 +91,6 @@
 				85F4CB53AC2C8C093E3B9C5A /* Pods-Swift5Bokete0.debug.xcconfig */,
 				2B468B4CC6570BE85C25834F /* Pods-Swift5Bokete0.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -208,6 +210,7 @@
 			files = (
 				05FE85472640D69700339FF9 /* ViewController.swift in Sources */,
 				05FE85432640D69700339FF9 /* AppDelegate.swift in Sources */,
+				05FE85572641021E00339FF9 /* ShareViewController.swift in Sources */,
 				05FE85452640D69700339FF9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
