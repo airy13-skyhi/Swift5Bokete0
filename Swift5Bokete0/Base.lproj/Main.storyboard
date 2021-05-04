@@ -101,6 +101,9 @@
                                 <rect key="frame" x="53" y="659" width="295" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="シェアする"/>
+                                <connections>
+                                    <action selector="share:" destination="OBN-rb-dio" eventType="touchUpInside" id="lgr-ff-Qxb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LON-Oy-qbr">
                                 <rect key="frame" x="48" y="472" width="300" height="118"/>
@@ -113,11 +116,18 @@
                                 <rect key="frame" x="48" y="718" width="300" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="戻る"/>
+                                <connections>
+                                    <action selector="back:" destination="OBN-rb-dio" eventType="touchUpInside" id="gT9-wO-bsM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5q-0H-7Nq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="commentLabel" destination="LON-Oy-qbr" id="urS-38-tnx"/>
+                        <outlet property="resultImageView" destination="V21-pK-J6H" id="jmi-OB-ezI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PpF-Sd-VNk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

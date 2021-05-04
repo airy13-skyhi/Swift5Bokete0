@@ -61,13 +61,25 @@ class ViewController: UIViewController {
         //Alamofireを使ってhttpリクエストを投げる
         AF.request(url, method: .get, parameters: nil, encoding: JSONEncoding.default).responseJSON { (response) in
             
-            switch response.result {
             
+            switch response.result {
             
             case .success:
                 let json:JSON = JSON(response.data as Any)
-                let iamgeString = json["hits"][self.count]["webformatURL"].string
-                self.odaiImageView.sd_setImage(with: URL(string: iamgeString!), completed: nil)
+                var imageString = json["hits"][self.count]["webformatURL"].string
+                
+                
+                if imageString == nil {
+                    
+                    imageString = json["hits"][0]["webformURL"].string
+                    self.odaiImageView.sd_setImage(with: URL(string: imageString!), completed: nil)
+                    
+                }else {
+                    
+                    self.odaiImageView.sd_setImage(with: URL(string: imageString!), completed: nil)
+                    
+                }
+                
                 
             case .failure(let error):
                 print(error)
@@ -119,6 +131,17 @@ class ViewController: UIViewController {
         
         
         performSegue(withIdentifier: "done", sender: nil)
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let shareVC = segue.debugDescription as? ShareViewController
+        shareVC?.commentString = commentTextView.text
+        shareVC?.resultImage = odaiImageView.image!
+        
+        
     }
     
     
